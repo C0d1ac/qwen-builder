@@ -108,8 +108,7 @@ for i, part in enumerate(parts):
         if part_num == 1:
             includes += [f['name'] for f in config_files]
         
-        df.write("RUN git lfs install && \\\n")
-        df.write(f"    git clone --depth 1 --filter=blob:none https://user:${{{{HF_TOKEN}}}}@huggingface.co/{MODEL_ID} repo && \\\n")
+        df.write("RUN GIT_LFS_SKIP_SMUDGE=1 git clone --depth 1 https://user:${{{{HF_TOKEN}}}}@huggingface.co/{MODEL_ID} repo && \\\n")
         df.write("    cd repo && \\\n")
         df.write("    git lfs pull \\\n")
         for inc in includes:

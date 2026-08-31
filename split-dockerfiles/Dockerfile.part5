@@ -7,8 +7,7 @@ ARG HF_TOKEN
 RUN apk add --no-cache git git-lfs ca-certificates
 WORKDIR /downloads
 
-RUN git lfs install && \
-    git clone --depth 1 --filter=blob:none https://user:${HF_TOKEN}@huggingface.co/Qwen/Qwen3.8-Flash-Next repo && \
+RUN GIT_LFS_SKIP_SMUDGE=1 git clone --depth 1 https://user:${HF_TOKEN}@huggingface.co/Qwen/Qwen3.8-Flash-Next repo && \
     cd repo && \
     git lfs pull \
         --include="model-00081-of-00131.safetensors" \
