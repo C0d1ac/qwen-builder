@@ -33,7 +33,7 @@ jobs:
             -t ghcr.io/{GHCR_OWNER}/qwen-part{part_num}:latest .
 
       - name: Push part {part_num}
-        run: docker push ghcr.io/{GHCR_OWNER}/qwen-part{part_num}:latest
+        run: docker push ghcr.io/c0d1ac/qwen-part{part_num}:latest
 
   build-part2:
     runs-on: ubuntu-latest
