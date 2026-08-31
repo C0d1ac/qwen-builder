@@ -195,10 +195,10 @@ for i in range(len(parts)):
       - name: Build part {part_num}
         run: |
           docker build -f split-dockerfiles/Dockerfile.part{part_num} \\
-            -t ghcr.io/{GHCR_OWNER}/qwen-part{part_num}:latest .
+            -t ghcr.io/{GHCR_OWNER.lower()}/qwen-part{part_num}:latest .
 
       - name: Push part {part_num}
-        run: docker push ghcr.io/{GHCR_OWNER}/qwen-part{part_num}:latest
+        run: docker push ghcr.io/{GHCR_OWNER.lower()}/qwen-part{part_num}:latest
 
 """
 
