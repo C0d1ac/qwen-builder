@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'split-dockerfiles/**'
+      - '.github/workflows/build-qwen.yml'
 
 permissions:
   contents: read
@@ -147,11 +148,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build part {part_num}
-        run: |
-          docker build -f split-dockerfiles/Dockerfile.part{part_num} \
-            -t ghcr.io/{GHCR_OWNER}/qwen-part{part_num}:latest .
-
-      - name: Push part {part_num}
-        run: docker push ghcr.io/{GHCR_OWNER}/qwen-part{part_num}:latest
+      - name: Build part 7
+        run: docker build -f split-dockerfiles/Dockerfile.part7 -t ghcr.io/c0d1ac/qwen-part7:latest .
+      - name: Push part 7
+        run: docker push ghcr.io/c0d1ac/qwen-part7:latest
 
