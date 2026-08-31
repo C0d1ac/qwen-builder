@@ -99,6 +99,7 @@ for i, part in enumerate(parts):
         df.write(f"# Size: ~{sum(f['size'] for f in part) / 1024**3:.2f} GB\n\n")
         
         df.write("FROM alpine:latest AS downloader\n")
+        df.write("ARG HF_TOKEN\n")
         df.write("RUN apk add --no-cache git git-lfs ca-certificates\n")
         df.write("WORKDIR /downloads\n\n")
         
@@ -108,7 +109,7 @@ for i, part in enumerate(parts):
             includes += [f['name'] for f in config_files]
         
         df.write("RUN git lfs install && \\\n")
-        df.write(f"    git clone --depth 1 --filter=blob:none https://huggingface.co/{MODEL_ID} repo && \\\n")
+        df.write(f"    git clone --depth 1 --filter=blob:none https://user:${{{{HF_TOKEN}}}}@huggingface.co/{MODEL_ID} repo && \\\n")
         df.write("    cd repo && \\\n")
         df.write("    git lfs pull \\\n")
         for inc in includes:
@@ -196,7 +197,7 @@ for i in range(len(parts)):
           password: ${{{{ secrets.GITHUB_TOKEN }}}}
 
       - name: Build part {part_num}
-        run: docker build -f split-dockerfiles/Dockerfile.part{part_num} -t ghcr.io/{GHCR_OWNER}/qwen-part{part_num}:latest .
+        run: docker build --build-arg HF_TOKEN=${{{{ secrets.HF_TOKEN }}}} -f split-dockerfiles/Dockerfile.part{part_num} -t ghcr.io/{GHCR_OWNER}/qwen-part{part_num}:latest .
 
       - name: Push part {part_num}
         run: docker push ghcr.io/{GHCR_OWNER}/qwen-part{part_num}:latest
