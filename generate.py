@@ -5,7 +5,7 @@ import json
 import urllib.request
 import os
 
-MODEL_ID = "Qwen/Qwen3.8-Flash-Next"
+MODEL_ID = "Qwen/Qwen3.8-Flash-Next-FP8"
 BASE_URL = f"https://huggingface.co/{MODEL_ID}/resolve/main"
 NUM_PARTS = 7
 

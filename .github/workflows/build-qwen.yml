@@ -28,9 +28,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build part 1
-        run: docker build --build-arg HF_TOKEN=${{ secrets.HF_TOKEN }} -f split-dockerfiles/Dockerfile.part1 -t ghcr.io/c0d1ac/qwen-flash-next-part1:latest .
+        run: docker build --build-arg HF_TOKEN=${{ secrets.HF_TOKEN }} -f split-dockerfiles/Dockerfile.part1 -t ghcr.io/c0d1ac/qwen-flash-next-fp8-part1:latest .
       - name: Push part 1
-        run: docker push ghcr.io/c0d1ac/qwen-flash-next-part1:latest
+        run: docker push ghcr.io/c0d1ac/qwen-flash-next-fp8-part1:latest
 
   build-part2:
     runs-on: ubuntu-latest
@@ -48,9 +48,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build part 2
-        run: docker build --build-arg HF_TOKEN=${{ secrets.HF_TOKEN }} -f split-dockerfiles/Dockerfile.part2 -t ghcr.io/c0d1ac/qwen-flash-next-part2:latest .
+        run: docker build --build-arg HF_TOKEN=${{ secrets.HF_TOKEN }} -f split-dockerfiles/Dockerfile.part2 -t ghcr.io/c0d1ac/qwen-flash-next-fp8-part2:latest .
       - name: Push part 2
-        run: docker push ghcr.io/c0d1ac/qwen-flash-next-part2:latest
+        run: docker push ghcr.io/c0d1ac/qwen-flash-next-fp8-part2:latest
 
   build-part3:
     runs-on: ubuntu-latest
@@ -68,9 +68,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build part 3
-        run: docker build --build-arg HF_TOKEN=${{ secrets.HF_TOKEN }} -f split-dockerfiles/Dockerfile.part3 -t ghcr.io/c0d1ac/qwen-flash-next-part3:latest .
+        run: docker build --build-arg HF_TOKEN=${{ secrets.HF_TOKEN }} -f split-dockerfiles/Dockerfile.part3 -t ghcr.io/c0d1ac/qwen-flash-next-fp8-part3:latest .
       - name: Push part 3
-        run: docker push ghcr.io/c0d1ac/qwen-flash-next-part3:latest
+        run: docker push ghcr.io/c0d1ac/qwen-flash-next-fp8-part3:latest
 
   build-part4:
     runs-on: ubuntu-latest
@@ -88,9 +88,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build part 4
-        run: docker build --build-arg HF_TOKEN=${{ secrets.HF_TOKEN }} -f split-dockerfiles/Dockerfile.part4 -t ghcr.io/c0d1ac/qwen-flash-next-part4:latest .
+        run: docker build --build-arg HF_TOKEN=${{ secrets.HF_TOKEN }} -f split-dockerfiles/Dockerfile.part4 -t ghcr.io/c0d1ac/qwen-flash-next-fp8-part4:latest .
       - name: Push part 4
-        run: docker push ghcr.io/c0d1ac/qwen-flash-next-part4:latest
+        run: docker push ghcr.io/c0d1ac/qwen-flash-next-fp8-part4:latest
 
   build-part5:
     runs-on: ubuntu-latest
@@ -108,9 +108,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build part 5
-        run: docker build --build-arg HF_TOKEN=${{ secrets.HF_TOKEN }} -f split-dockerfiles/Dockerfile.part5 -t ghcr.io/c0d1ac/qwen-flash-next-part5:latest .
+        run: docker build --build-arg HF_TOKEN=${{ secrets.HF_TOKEN }} -f split-dockerfiles/Dockerfile.part5 -t ghcr.io/c0d1ac/qwen-flash-next-fp8-part5:latest .
       - name: Push part 5
-        run: docker push ghcr.io/c0d1ac/qwen-flash-next-part5:latest
+        run: docker push ghcr.io/c0d1ac/qwen-flash-next-fp8-part5:latest
 
   build-part6:
     runs-on: ubuntu-latest
@@ -128,9 +128,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build part 6
-        run: docker build --build-arg HF_TOKEN=${{ secrets.HF_TOKEN }} -f split-dockerfiles/Dockerfile.part6 -t ghcr.io/c0d1ac/qwen-flash-next-part6:latest .
+        run: docker build --build-arg HF_TOKEN=${{ secrets.HF_TOKEN }} -f split-dockerfiles/Dockerfile.part6 -t ghcr.io/c0d1ac/qwen-flash-next-fp8-part6:latest .
       - name: Push part 6
-        run: docker push ghcr.io/c0d1ac/qwen-flash-next-part6:latest
+        run: docker push ghcr.io/c0d1ac/qwen-flash-next-fp8-part6:latest
 
   build-part7:
     runs-on: ubuntu-latest
@@ -149,7 +149,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build part 7
-        run: docker build --build-arg HF_TOKEN=${{ secrets.HF_TOKEN }} -f split-dockerfiles/Dockerfile.part7 -t ghcr.io/c0d1ac/qwen-flash-next-part7:latest .
+        run: docker build --build-arg HF_TOKEN=${{ secrets.HF_TOKEN }} -f split-dockerfiles/Dockerfile.part7 -t ghcr.io/c0d1ac/qwen-flash-next-fp8-part7:latest .
       - name: Push part 7
-        run: docker push ghcr.io/c0d1ac/qwen-flash-next-part7:latest
+        run: docker push ghcr.io/c0d1ac/qwen-flash-next-fp8-part7:latest
 

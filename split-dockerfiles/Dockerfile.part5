@@ -2,37 +2,30 @@ FROM alpine:latest
 RUN apk add --no-cache wget ca-certificates
 WORKDIR /model
 
-# ~9.6GB layer
+# ~9.0GB layer
 RUN \
-    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00071-of-00131.safetensors" -O "/model/model-00071-of-00131.safetensors" && \
-    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00072-of-00131.safetensors" -O "/model/model-00072-of-00131.safetensors" && \
-    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00073-of-00131.safetensors" -O "/model/model-00073-of-00131.safetensors" && \
-    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00074-of-00131.safetensors" -O "/model/model-00074-of-00131.safetensors"
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/model-00071-of-00131.safetensors" -O "/model/model-00071-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/model-00072-of-00131.safetensors" -O "/model/model-00072-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/model-00073-of-00131.safetensors" -O "/model/model-00073-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/model-00074-of-00131.safetensors" -O "/model/model-00074-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/model-00075-of-00131.safetensors" -O "/model/model-00075-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/model-00076-of-00131.safetensors" -O "/model/model-00076-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/model-00077-of-00131.safetensors" -O "/model/model-00077-of-00131.safetensors"
 
-# ~8.1GB layer
+# ~8.3GB layer
 RUN \
-    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00075-of-00131.safetensors" -O "/model/model-00075-of-00131.safetensors" && \
-    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00076-of-00131.safetensors" -O "/model/model-00076-of-00131.safetensors" && \
-    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00077-of-00131.safetensors" -O "/model/model-00077-of-00131.safetensors"
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/model-00078-of-00131.safetensors" -O "/model/model-00078-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/model-00079-of-00131.safetensors" -O "/model/model-00079-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/model-00080-of-00131.safetensors" -O "/model/model-00080-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/model-00081-of-00131.safetensors" -O "/model/model-00081-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/model-00082-of-00131.safetensors" -O "/model/model-00082-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/model-00083-of-00131.safetensors" -O "/model/model-00083-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/model-00084-of-00131.safetensors" -O "/model/model-00084-of-00131.safetensors"
 
-# ~9.6GB layer
+# ~6.6GB layer
 RUN \
-    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00078-of-00131.safetensors" -O "/model/model-00078-of-00131.safetensors" && \
-    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00079-of-00131.safetensors" -O "/model/model-00079-of-00131.safetensors" && \
-    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00080-of-00131.safetensors" -O "/model/model-00080-of-00131.safetensors" && \
-    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00081-of-00131.safetensors" -O "/model/model-00081-of-00131.safetensors"
-
-# ~9.7GB layer
-RUN \
-    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00082-of-00131.safetensors" -O "/model/model-00082-of-00131.safetensors" && \
-    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00083-of-00131.safetensors" -O "/model/model-00083-of-00131.safetensors" && \
-    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00084-of-00131.safetensors" -O "/model/model-00084-of-00131.safetensors" && \
-    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00085-of-00131.safetensors" -O "/model/model-00085-of-00131.safetensors"
-
-# ~9.8GB layer
-RUN \
-    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00086-of-00131.safetensors" -O "/model/model-00086-of-00131.safetensors" && \
-    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00087-of-00131.safetensors" -O "/model/model-00087-of-00131.safetensors" && \
-    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00088-of-00131.safetensors" -O "/model/model-00088-of-00131.safetensors" && \
-    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00089-of-00131.safetensors" -O "/model/model-00089-of-00131.safetensors"
-
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/model-00085-of-00131.safetensors" -O "/model/model-00085-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/model-00086-of-00131.safetensors" -O "/model/model-00086-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/model-00087-of-00131.safetensors" -O "/model/model-00087-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/model-00088-of-00131.safetensors" -O "/model/model-00088-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/resolve/main/model-00089-of-00131.safetensors" -O "/model/model-00089-of-00131.safetensors"
