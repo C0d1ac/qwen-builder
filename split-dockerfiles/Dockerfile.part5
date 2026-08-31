@@ -1,97 +1,38 @@
-# Part 5 of 7
-# Shards: model-00081-of-00131.safetensors to model-00102-of-00131.safetensors
-# Size: ~53.22 GB
-
-FROM alpine:latest AS downloader
-ARG HF_TOKEN
-RUN apk add --no-cache git git-lfs ca-certificates
-WORKDIR /downloads
-
-RUN GIT_LFS_SKIP_SMUDGE=1 git clone --depth 1 https://user:${HF_TOKEN}@huggingface.co/Qwen/Qwen3.8-Flash-Next repo && \
-    cd repo && \
-    git lfs pull \
-        --include="model-00081-of-00131.safetensors" \
-        --include="model-00082-of-00131.safetensors" \
-        --include="model-00083-of-00131.safetensors" \
-        --include="model-00084-of-00131.safetensors" \
-        --include="model-00085-of-00131.safetensors" \
-        --include="model-00086-of-00131.safetensors" \
-        --include="model-00087-of-00131.safetensors" \
-        --include="model-00088-of-00131.safetensors" \
-        --include="model-00089-of-00131.safetensors" \
-        --include="model-00090-of-00131.safetensors" \
-        --include="model-00091-of-00131.safetensors" \
-        --include="model-00092-of-00131.safetensors" \
-        --include="model-00093-of-00131.safetensors" \
-        --include="model-00094-of-00131.safetensors" \
-        --include="model-00095-of-00131.safetensors" \
-        --include="model-00096-of-00131.safetensors" \
-        --include="model-00097-of-00131.safetensors" \
-        --include="model-00098-of-00131.safetensors" \
-        --include="model-00099-of-00131.safetensors" \
-        --include="model-00100-of-00131.safetensors" \
-        --include="model-00101-of-00131.safetensors" \
-        --include="model-00102-of-00131.safetensors" \
-    && cd .. && \
-    mkdir -p /model && \
-    cd repo && \
-    cp model-00081-of-00131.safetensors /model/ && \
-    cp model-00082-of-00131.safetensors /model/ && \
-    cp model-00083-of-00131.safetensors /model/ && \
-    cp model-00084-of-00131.safetensors /model/ && \
-    cp model-00085-of-00131.safetensors /model/ && \
-    cp model-00086-of-00131.safetensors /model/ && \
-    cp model-00087-of-00131.safetensors /model/ && \
-    cp model-00088-of-00131.safetensors /model/ && \
-    cp model-00089-of-00131.safetensors /model/ && \
-    cp model-00090-of-00131.safetensors /model/ && \
-    cp model-00091-of-00131.safetensors /model/ && \
-    cp model-00092-of-00131.safetensors /model/ && \
-    cp model-00093-of-00131.safetensors /model/ && \
-    cp model-00094-of-00131.safetensors /model/ && \
-    cp model-00095-of-00131.safetensors /model/ && \
-    cp model-00096-of-00131.safetensors /model/ && \
-    cp model-00097-of-00131.safetensors /model/ && \
-    cp model-00098-of-00131.safetensors /model/ && \
-    cp model-00099-of-00131.safetensors /model/ && \
-    cp model-00100-of-00131.safetensors /model/ && \
-    cp model-00101-of-00131.safetensors /model/ && \
-    cp model-00102-of-00131.safetensors /model/ && \
-    cd .. && rm -rf repo
-
 FROM alpine:latest
+RUN apk add --no-cache wget ca-certificates
 WORKDIR /model
 
-# Layer ~8.1 GB
-COPY --from=downloader /model/model-00081-of-00131.safetensors /model/model-00081-of-00131.safetensors
-COPY --from=downloader /model/model-00082-of-00131.safetensors /model/model-00082-of-00131.safetensors
-COPY --from=downloader /model/model-00083-of-00131.safetensors /model/model-00083-of-00131.safetensors
+# ~9.6GB layer
+RUN \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00071-of-00131.safetensors" -O "/model/model-00071-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00072-of-00131.safetensors" -O "/model/model-00072-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00073-of-00131.safetensors" -O "/model/model-00073-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00074-of-00131.safetensors" -O "/model/model-00074-of-00131.safetensors"
 
-# Layer ~9.7 GB
-COPY --from=downloader /model/model-00084-of-00131.safetensors /model/model-00084-of-00131.safetensors
-COPY --from=downloader /model/model-00085-of-00131.safetensors /model/model-00085-of-00131.safetensors
-COPY --from=downloader /model/model-00086-of-00131.safetensors /model/model-00086-of-00131.safetensors
-COPY --from=downloader /model/model-00087-of-00131.safetensors /model/model-00087-of-00131.safetensors
+# ~8.1GB layer
+RUN \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00075-of-00131.safetensors" -O "/model/model-00075-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00076-of-00131.safetensors" -O "/model/model-00076-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00077-of-00131.safetensors" -O "/model/model-00077-of-00131.safetensors"
 
-# Layer ~9.7 GB
-COPY --from=downloader /model/model-00088-of-00131.safetensors /model/model-00088-of-00131.safetensors
-COPY --from=downloader /model/model-00089-of-00131.safetensors /model/model-00089-of-00131.safetensors
-COPY --from=downloader /model/model-00090-of-00131.safetensors /model/model-00090-of-00131.safetensors
-COPY --from=downloader /model/model-00091-of-00131.safetensors /model/model-00091-of-00131.safetensors
+# ~9.6GB layer
+RUN \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00078-of-00131.safetensors" -O "/model/model-00078-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00079-of-00131.safetensors" -O "/model/model-00079-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00080-of-00131.safetensors" -O "/model/model-00080-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00081-of-00131.safetensors" -O "/model/model-00081-of-00131.safetensors"
 
-# Layer ~9.7 GB
-COPY --from=downloader /model/model-00092-of-00131.safetensors /model/model-00092-of-00131.safetensors
-COPY --from=downloader /model/model-00093-of-00131.safetensors /model/model-00093-of-00131.safetensors
-COPY --from=downloader /model/model-00094-of-00131.safetensors /model/model-00094-of-00131.safetensors
-COPY --from=downloader /model/model-00095-of-00131.safetensors /model/model-00095-of-00131.safetensors
+# ~9.7GB layer
+RUN \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00082-of-00131.safetensors" -O "/model/model-00082-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00083-of-00131.safetensors" -O "/model/model-00083-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00084-of-00131.safetensors" -O "/model/model-00084-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00085-of-00131.safetensors" -O "/model/model-00085-of-00131.safetensors"
 
-# Layer ~9.7 GB
-COPY --from=downloader /model/model-00096-of-00131.safetensors /model/model-00096-of-00131.safetensors
-COPY --from=downloader /model/model-00097-of-00131.safetensors /model/model-00097-of-00131.safetensors
-COPY --from=downloader /model/model-00098-of-00131.safetensors /model/model-00098-of-00131.safetensors
-COPY --from=downloader /model/model-00099-of-00131.safetensors /model/model-00099-of-00131.safetensors
+# ~9.8GB layer
+RUN \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00086-of-00131.safetensors" -O "/model/model-00086-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00087-of-00131.safetensors" -O "/model/model-00087-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00088-of-00131.safetensors" -O "/model/model-00088-of-00131.safetensors" && \
+    wget -q "https://huggingface.co/Qwen/Qwen3.8-Flash-Next/resolve/main/model-00089-of-00131.safetensors" -O "/model/model-00089-of-00131.safetensors"
 
-# Layer ~6.5 GB
-COPY --from=downloader /model/model-00100-of-00131.safetensors /model/model-00100-of-00131.safetensors
-COPY --from=downloader /model/model-00101-of-00131.safetensors /model/model-00101-of-00131.safetensors
-COPY --from=downloader /model/model-00102-of-00131.safetensors /model/model-00102-of-00131.safetensors
