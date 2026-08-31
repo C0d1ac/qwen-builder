@@ -159,13 +159,18 @@ for i, part in enumerate(parts):
     print(f"Created {filename}")
 
 # Generate GitHub Actions workflow
-workflow = """name: Build Qwen Model Parts
+workflow = f"""name: Build Qwen Model Parts
 
 on:
   workflow_dispatch:
   push:
     paths:
       - 'split-dockerfiles/**'
+      - '.github/workflows/build-qwen.yml'
+
+permissions:
+  contents: read
+  packages: write
 
 jobs:
 """
@@ -174,8 +179,6 @@ for i in range(len(parts)):
     part_num = i + 1
     workflow += f"""  build-part{part_num}:
     runs-on: ubuntu-latest
-    permissions:
-      packages: write
     steps:
       - uses: actions/checkout@v4
 
@@ -189,13 +192,11 @@ for i in range(len(parts)):
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: """ + "${{ github.actor }}" + """
-          password: """ + "${{ secrets.GITHUB_TOKEN }}" + """
+          username: ${{{{ github.actor }}}}
+          password: ${{{{ secrets.GITHUB_TOKEN }}}}
 
       - name: Build part {part_num}
-        run: |
-          docker build -f split-dockerfiles/Dockerfile.part{part_num} \\
-            -t ghcr.io/{GHCR_OWNER}/qwen-part{part_num}:latest .
+        run: docker build -f split-dockerfiles/Dockerfile.part{part_num} -t ghcr.io/{GHCR_OWNER}/qwen-part{part_num}:latest .
 
       - name: Push part {part_num}
         run: docker push ghcr.io/{GHCR_OWNER}/qwen-part{part_num}:latest
