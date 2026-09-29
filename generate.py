@@ -5,9 +5,9 @@ import json
 import urllib.request
 import os
 
-MODEL_ID = "Qwen/Qwen3.8-Flash-Next-FP8"
+MODEL_ID = "Qwen/Qwen3-0.6B"
 BASE_URL = f"https://huggingface.co/{MODEL_ID}/resolve/main"
-NUM_PARTS = 7
+NUM_PARTS = 1
 
 print("Fetching file list...")
 url = f"https://huggingface.co/api/models/{MODEL_ID}/tree/main"
