@@ -1,0 +1,8 @@
+FROM alpine:latest
+RUN apk add --no-cache wget ca-certificates
+WORKDIR /model
+
+# ~9.3GB layer
+RUN \
+    wget -q "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/model-00004-of-00010.safetensors" -O "/model/model-00004-of-00010.safetensors"
+

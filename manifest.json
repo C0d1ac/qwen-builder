@@ -1,0 +1,405 @@
+{
+  "repo_id": "nvidia/Qwen3.8-Flash-Next-NVFP4",
+  "endpoint": "https://huggingface.co",
+  "chunk_bytes": 9663676416,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "size": 0
+    },
+    {
+      "path": "README.md",
+      "size": 0
+    },
+    {
+      "path": "chat_template.jinja",
+      "size": 0
+    },
+    {
+      "path": "config.json",
+      "size": 0
+    },
+    {
+      "path": "generation_config.json",
+      "size": 202
+    },
+    {
+      "path": "hf_quant_config.json",
+      "size": 0
+    },
+    {
+      "path": "merges.txt",
+      "size": 0
+    },
+    {
+      "path": "model-00001-of-00010.safetensors",
+      "size": 3115991696
+    },
+    {
+      "path": "model-00002-of-00010.safetensors",
+      "size": 10005510304
+    },
+    {
+      "path": "model-00003-of-00010.safetensors",
+      "size": 10005364728
+    },
+    {
+      "path": "model-00004-of-00010.safetensors",
+      "size": 10006060112
+    },
+    {
+      "path": "model-00005-of-00010.safetensors",
+      "size": 10005362392
+    },
+    {
+      "path": "model-00006-of-00010.safetensors",
+      "size": 10005375328
+    },
+    {
+      "path": "model-00007-of-00010.safetensors",
+      "size": 10005956544
+    },
+    {
+      "path": "model-00008-of-00010.safetensors",
+      "size": 10005375200
+    },
+    {
+      "path": "model-00009-of-00010.safetensors",
+      "size": 5679113808
+    },
+    {
+      "path": "model-00010-of-00010.safetensors",
+      "size": 128587536
+    },
+    {
+      "path": "model-fp8-mtp-ple.safetensors",
+      "size": 53717551730
+    },
+    {
+      "path": "model.safetensors.index.json",
+      "size": 31275518
+    },
+    {
+      "path": "preprocessor_config.json",
+      "size": 390
+    },
+    {
+      "path": "processor_config.json",
+      "size": 0
+    },
+    {
+      "path": "tokenizer.json",
+      "size": 12809320
+    },
+    {
+      "path": "tokenizer_config.json",
+      "size": 0
+    },
+    {
+      "path": "video_preprocessor_config.json",
+      "size": 385
+    },
+    {
+      "path": "vocab.json",
+      "size": 0
+    }
+  ],
+  "chunks": [
+    {
+      "source_file": ".gitattributes",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 0,
+      "chunk_name": ".gitattributes.part000"
+    },
+    {
+      "source_file": "README.md",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 0,
+      "chunk_name": "README.md.part000"
+    },
+    {
+      "source_file": "chat_template.jinja",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 0,
+      "chunk_name": "chat_template.jinja.part000"
+    },
+    {
+      "source_file": "config.json",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 0,
+      "chunk_name": "config.json.part000"
+    },
+    {
+      "source_file": "generation_config.json",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 202,
+      "chunk_name": "generation_config.json.part000"
+    },
+    {
+      "source_file": "hf_quant_config.json",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 0,
+      "chunk_name": "hf_quant_config.json.part000"
+    },
+    {
+      "source_file": "merges.txt",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 0,
+      "chunk_name": "merges.txt.part000"
+    },
+    {
+      "source_file": "model-00001-of-00010.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3115991696,
+      "chunk_name": "model-00001-of-00010.safetensors.part000"
+    },
+    {
+      "source_file": "model-00002-of-00010.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 2,
+      "offset": 0,
+      "size": 5002755152,
+      "chunk_name": "model-00002-of-00010.safetensors.part000"
+    },
+    {
+      "source_file": "model-00002-of-00010.safetensors",
+      "chunk_index": 1,
+      "total_chunks": 2,
+      "offset": 5002755152,
+      "size": 5002755152,
+      "chunk_name": "model-00002-of-00010.safetensors.part001"
+    },
+    {
+      "source_file": "model-00003-of-00010.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 2,
+      "offset": 0,
+      "size": 5002682364,
+      "chunk_name": "model-00003-of-00010.safetensors.part000"
+    },
+    {
+      "source_file": "model-00003-of-00010.safetensors",
+      "chunk_index": 1,
+      "total_chunks": 2,
+      "offset": 5002682364,
+      "size": 5002682364,
+      "chunk_name": "model-00003-of-00010.safetensors.part001"
+    },
+    {
+      "source_file": "model-00004-of-00010.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 2,
+      "offset": 0,
+      "size": 5003030056,
+      "chunk_name": "model-00004-of-00010.safetensors.part000"
+    },
+    {
+      "source_file": "model-00004-of-00010.safetensors",
+      "chunk_index": 1,
+      "total_chunks": 2,
+      "offset": 5003030056,
+      "size": 5003030056,
+      "chunk_name": "model-00004-of-00010.safetensors.part001"
+    },
+    {
+      "source_file": "model-00005-of-00010.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 2,
+      "offset": 0,
+      "size": 5002681196,
+      "chunk_name": "model-00005-of-00010.safetensors.part000"
+    },
+    {
+      "source_file": "model-00005-of-00010.safetensors",
+      "chunk_index": 1,
+      "total_chunks": 2,
+      "offset": 5002681196,
+      "size": 5002681196,
+      "chunk_name": "model-00005-of-00010.safetensors.part001"
+    },
+    {
+      "source_file": "model-00006-of-00010.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 2,
+      "offset": 0,
+      "size": 5002687664,
+      "chunk_name": "model-00006-of-00010.safetensors.part000"
+    },
+    {
+      "source_file": "model-00006-of-00010.safetensors",
+      "chunk_index": 1,
+      "total_chunks": 2,
+      "offset": 5002687664,
+      "size": 5002687664,
+      "chunk_name": "model-00006-of-00010.safetensors.part001"
+    },
+    {
+      "source_file": "model-00007-of-00010.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 2,
+      "offset": 0,
+      "size": 5002978272,
+      "chunk_name": "model-00007-of-00010.safetensors.part000"
+    },
+    {
+      "source_file": "model-00007-of-00010.safetensors",
+      "chunk_index": 1,
+      "total_chunks": 2,
+      "offset": 5002978272,
+      "size": 5002978272,
+      "chunk_name": "model-00007-of-00010.safetensors.part001"
+    },
+    {
+      "source_file": "model-00008-of-00010.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 2,
+      "offset": 0,
+      "size": 5002687600,
+      "chunk_name": "model-00008-of-00010.safetensors.part000"
+    },
+    {
+      "source_file": "model-00008-of-00010.safetensors",
+      "chunk_index": 1,
+      "total_chunks": 2,
+      "offset": 5002687600,
+      "size": 5002687600,
+      "chunk_name": "model-00008-of-00010.safetensors.part001"
+    },
+    {
+      "source_file": "model-00009-of-00010.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 5679113808,
+      "chunk_name": "model-00009-of-00010.safetensors.part000"
+    },
+    {
+      "source_file": "model-00010-of-00010.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 128587536,
+      "chunk_name": "model-00010-of-00010.safetensors.part000"
+    },
+    {
+      "source_file": "model-fp8-mtp-ple.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 6,
+      "offset": 0,
+      "size": 8952925289,
+      "chunk_name": "model-fp8-mtp-ple.safetensors.part000"
+    },
+    {
+      "source_file": "model-fp8-mtp-ple.safetensors",
+      "chunk_index": 1,
+      "total_chunks": 6,
+      "offset": 8952925289,
+      "size": 8952925289,
+      "chunk_name": "model-fp8-mtp-ple.safetensors.part001"
+    },
+    {
+      "source_file": "model-fp8-mtp-ple.safetensors",
+      "chunk_index": 2,
+      "total_chunks": 6,
+      "offset": 17905850578,
+      "size": 8952925289,
+      "chunk_name": "model-fp8-mtp-ple.safetensors.part002"
+    },
+    {
+      "source_file": "model-fp8-mtp-ple.safetensors",
+      "chunk_index": 3,
+      "total_chunks": 6,
+      "offset": 26858775867,
+      "size": 8952925289,
+      "chunk_name": "model-fp8-mtp-ple.safetensors.part003"
+    },
+    {
+      "source_file": "model-fp8-mtp-ple.safetensors",
+      "chunk_index": 4,
+      "total_chunks": 6,
+      "offset": 35811701156,
+      "size": 8952925289,
+      "chunk_name": "model-fp8-mtp-ple.safetensors.part004"
+    },
+    {
+      "source_file": "model-fp8-mtp-ple.safetensors",
+      "chunk_index": 5,
+      "total_chunks": 6,
+      "offset": 44764626445,
+      "size": 8952925285,
+      "chunk_name": "model-fp8-mtp-ple.safetensors.part005"
+    },
+    {
+      "source_file": "model.safetensors.index.json",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 31275518,
+      "chunk_name": "model.safetensors.index.json.part000"
+    },
+    {
+      "source_file": "preprocessor_config.json",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 390,
+      "chunk_name": "preprocessor_config.json.part000"
+    },
+    {
+      "source_file": "processor_config.json",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 0,
+      "chunk_name": "processor_config.json.part000"
+    },
+    {
+      "source_file": "tokenizer.json",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 12809320,
+      "chunk_name": "tokenizer.json.part000"
+    },
+    {
+      "source_file": "tokenizer_config.json",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 0,
+      "chunk_name": "tokenizer_config.json.part000"
+    },
+    {
+      "source_file": "video_preprocessor_config.json",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 385,
+      "chunk_name": "video_preprocessor_config.json.part000"
+    },
+    {
+      "source_file": "vocab.json",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 0,
+      "chunk_name": "vocab.json.part000"
+    }
+  ]
+}
