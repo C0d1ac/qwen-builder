@@ -1,8 +1,9 @@
-FROM alpine:latest
-RUN apk add --no-cache wget ca-certificates
-WORKDIR /model
+FROM python:3.12-slim
+ARG HF_TOKEN
+ENV HF_TOKEN=$HF_TOKEN
+RUN pip install --no-cache-dir huggingface_hub
+RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
+WORKDIR /root/.cache/huggingface
 
-# ~9.3GB layer
-RUN \
-    wget -q "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/model-00004-of-00010.safetensors" -O "/model/model-00004-of-00010.safetensors"
-
+RUN mkdir -p /root/.cache/huggingface/chunks && curl --fail --location --retry 5 --retry-all-errors -H "Authorization: Bearer $HF_TOKEN" -H "Range: bytes=0-9663676415" "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/model-00004-of-00010.safetensors" -o /root/.cache/huggingface/chunks/model-00004-of-00010.safetensors.part000
+RUN mkdir -p /root/.cache/huggingface/chunks && curl --fail --location --retry 5 --retry-all-errors -H "Authorization: Bearer $HF_TOKEN" -H "Range: bytes=9663676416-10006060111" "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/model-00004-of-00010.safetensors" -o /root/.cache/huggingface/chunks/model-00004-of-00010.safetensors.part001

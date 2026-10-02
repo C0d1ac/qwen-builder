@@ -14,7 +14,7 @@ echo
 echo "$GHCR_TOKEN" | docker login ghcr.io -u "$OWNER" --password-stdin
 
 for i in $(seq 1 $NUM_PARTS); do
-    IMAGE="ghcr.io/$OWNER/qwen-part$i:latest"
+    IMAGE="ghcr.io/$OWNER/qwen-nvfp4:part$i"
     CONTAINER="qwen-extract-$i"
 
     echo "========================================="

@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-"""Just generates 7 Dockerfiles using wget"""
+"""Generate per-part Dockerfiles using the Hugging Face CLI."""
 
 import json
 import urllib.request
 import os
 
 MODEL_ID = "nvidia/Qwen3.8-Flash-Next-NVFP4"
-BASE_URL = f"https://huggingface.co/{MODEL_ID}/resolve/main"
 NUM_PARTS = 10
+MAX_LAYER_BYTES = 9 * 1024**3
 
 print("Fetching file list...")
 url = f"https://huggingface.co/api/models/{MODEL_ID}/tree/main"
@@ -39,6 +39,8 @@ for f in safetensors:
     parts[part_idx].append(f)
     part_size += f['size']
 
+parts = [part for part in parts if part]
+
 os.makedirs("split-dockerfiles", exist_ok=True)
 
 for i, part in enumerate(parts):
@@ -47,41 +49,43 @@ for i, part in enumerate(parts):
     print(f"Part {part_num}: {len(part)} shards, {size_gb:.1f}GB")
     
     with open(f"split-dockerfiles/Dockerfile.part{part_num}", 'w') as df:
-        df.write("FROM alpine:latest\n")
-        df.write("RUN apk add --no-cache wget ca-certificates\n")
-        df.write("WORKDIR /model\n\n")
+        df.write("FROM python:3.12-slim\n")
+        df.write("ARG HF_TOKEN\n")
+        df.write("ENV HF_TOKEN=$HF_TOKEN\n")
+        df.write("RUN pip install --no-cache-dir huggingface_hub\n")
+        df.write("RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*\n")
+        df.write("WORKDIR /root/.cache/huggingface\n\n")
         
         # Config files only in part 1
         if part_num == 1:
             df.write("# Config & tokenizer\n")
-            for f in config_files:
-                df.write(f'RUN wget -q "{BASE_URL}/{f["path"]}" -O "/model/{f["path"]}"\n')
+            download_files = config_files + part
+        else:
+            download_files = part
+        regular_files = [f for f in download_files if f["size"] <= MAX_LAYER_BYTES]
+        large_files = [f for f in download_files if f["size"] > MAX_LAYER_BYTES]
+        if regular_files:
+            df.write("RUN hf download \\\n")
+            df.write(f"    {MODEL_ID} \\\n")
+            for index, f in enumerate(regular_files):
+                suffix = " \\\n" if index < len(regular_files) - 1 else "\n"
+                df.write(f'    "{f["path"]}"{suffix}')
             df.write("\n")
-        
-        # Group shards into layers (~8GB each)
-        layer = []
-        layer_size = 0
-        max_layer = 8 * 1024**3
-        
-        for f in part:
-            layer.append(f)
-            layer_size += f['size']
-            
-            if layer_size >= max_layer:
-                df.write(f"# ~{layer_size/1024**3:.1f}GB layer\n")
-                df.write("RUN \\\n")
-                for j, sf in enumerate(layer):
-                    end = " && \\\n" if j < len(layer) - 1 else "\n"
-                    df.write(f'    wget -q "{BASE_URL}/{sf["path"]}" -O "/model/{sf["path"]}"{end}')
-                df.write("\n")
-                layer = []
-                layer_size = 0
-        
-        if layer:
-            df.write(f"# ~{layer_size/1024**3:.1f}GB layer\n")
-            df.write("RUN \\\n")
-            for j, sf in enumerate(layer):
-                end = " && \\\n" if j < len(layer) - 1 else "\n"
-                df.write(f'    wget -q "{BASE_URL}/{sf["path"]}" -O "/model/{sf["path"]}"{end}')
+        for f in large_files:
+            chunk_count = (f["size"] + MAX_LAYER_BYTES - 1) // MAX_LAYER_BYTES
+            safe_name = f["path"].replace("/", "_")
+            url = f"https://huggingface.co/{MODEL_ID}/resolve/main/{f['path']}"
+            for index in range(chunk_count):
+                start = index * MAX_LAYER_BYTES
+                end = min(f["size"], start + MAX_LAYER_BYTES) - 1
+                chunk_name = f"{safe_name}.part{index:03d}"
+                df.write(
+                    f"RUN mkdir -p /root/.cache/huggingface/chunks && "
+                    f"curl --fail --location --retry 5 --retry-all-errors "
+                        f"-H \"Authorization: Bearer $HF_TOKEN\" "
+                        f"-H \"Range: bytes={start}-{end}\" "
+                        f"\"{url}\" -o "
+                    f"/root/.cache/huggingface/chunks/{chunk_name}\n"
+                )
 
 print("\nDone! Files in split-dockerfiles/")

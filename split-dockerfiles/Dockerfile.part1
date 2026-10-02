@@ -1,23 +1,27 @@
-FROM alpine:latest
-RUN apk add --no-cache wget ca-certificates
-WORKDIR /model
+FROM python:3.12-slim
+ARG HF_TOKEN
+ENV HF_TOKEN=$HF_TOKEN
+RUN pip install --no-cache-dir huggingface_hub
+RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
+WORKDIR /root/.cache/huggingface
 
 # Config & tokenizer
-RUN wget -q "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/README.md" -O "/model/README.md"
-RUN wget -q "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/chat_template.jinja" -O "/model/chat_template.jinja"
-RUN wget -q "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/config.json" -O "/model/config.json"
-RUN wget -q "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/generation_config.json" -O "/model/generation_config.json"
-RUN wget -q "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/hf_quant_config.json" -O "/model/hf_quant_config.json"
-RUN wget -q "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/merges.txt" -O "/model/merges.txt"
-RUN wget -q "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/model.safetensors.index.json" -O "/model/model.safetensors.index.json"
-RUN wget -q "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/preprocessor_config.json" -O "/model/preprocessor_config.json"
-RUN wget -q "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/processor_config.json" -O "/model/processor_config.json"
-RUN wget -q "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/tokenizer.json" -O "/model/tokenizer.json"
-RUN wget -q "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/tokenizer_config.json" -O "/model/tokenizer_config.json"
-RUN wget -q "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/video_preprocessor_config.json" -O "/model/video_preprocessor_config.json"
-RUN wget -q "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/vocab.json" -O "/model/vocab.json"
+RUN hf download \
+    nvidia/Qwen3.8-Flash-Next-NVFP4 \
+    "README.md" \
+    "chat_template.jinja" \
+    "config.json" \
+    "generation_config.json" \
+    "hf_quant_config.json" \
+    "merges.txt" \
+    "model.safetensors.index.json" \
+    "preprocessor_config.json" \
+    "processor_config.json" \
+    "tokenizer.json" \
+    "tokenizer_config.json" \
+    "video_preprocessor_config.json" \
+    "vocab.json" \
+    "model-00001-of-00010.safetensors"
 
-# ~12.2GB layer
-RUN \
-    wget -q "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/model-00002-of-00010.safetensors" -O "/model/model-00002-of-00010.safetensors"
-
+RUN mkdir -p /root/.cache/huggingface/chunks && curl --fail --location --retry 5 --retry-all-errors -H "Authorization: Bearer $HF_TOKEN" -H "Range: bytes=0-9663676415" "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/model-00002-of-00010.safetensors" -o /root/.cache/huggingface/chunks/model-00002-of-00010.safetensors.part000
+RUN mkdir -p /root/.cache/huggingface/chunks && curl --fail --location --retry 5 --retry-all-errors -H "Authorization: Bearer $HF_TOKEN" -H "Range: bytes=9663676416-10005510303" "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/model-00002-of-00010.safetensors" -o /root/.cache/huggingface/chunks/model-00002-of-00010.safetensors.part001

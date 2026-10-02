@@ -98,30 +98,22 @@ for i, part in enumerate(parts):
         df.write(f"# Shards: {part[0]['name']} to {part[-1]['name']}\n")
         df.write(f"# Size: ~{sum(f['size'] for f in part) / 1024**3:.2f} GB\n\n")
         
-        df.write("FROM alpine:latest AS downloader\n")
+        df.write("FROM python:3.12-slim AS downloader\n")
         df.write("ARG HF_TOKEN\n")
-        df.write("RUN apk add --no-cache git git-lfs ca-certificates\n")
+        df.write("ENV HF_TOKEN=$HF_TOKEN\n")
+        df.write("RUN pip install --no-cache-dir huggingface_hub\n")
         df.write("WORKDIR /downloads\n\n")
         
-        # Build the git lfs pull command with includes
+        # Download only the files assigned to this part.
         includes = [f['name'] for f in part]
         if part_num == 1:
             includes += [f['name'] for f in config_files]
         
-        df.write("RUN GIT_LFS_SKIP_SMUDGE=1 git clone --depth 1 https://user:${{{{HF_TOKEN}}}}@huggingface.co/{MODEL_ID} repo && \\\n")
-        df.write("    cd repo && \\\n")
-        df.write("    git lfs pull \\\n")
+        df.write("RUN hf download \\\n")
+        df.write(f"    {MODEL_ID} \\\n")
         for inc in includes:
-            df.write(f'        --include="{inc}" \\\n')
-        df.write("    && cd .. && \\\n")
-        df.write("    mkdir -p /model && \\\n")
-        df.write("    cd repo && \\\n")
-        for f in part:
-            df.write(f"    cp {f['name']} /model/ && \\\n")
-        if part_num == 1:
-            for f in config_files:
-                df.write(f"    cp {f['name']} /model/ && \\\n")
-        df.write("    cd .. && rm -rf repo\n\n")
+            df.write(f'    "{inc}" \\\n')
+        df.write("\n")
         
         df.write("FROM alpine:latest\n")
         df.write("WORKDIR /model\n\n")
