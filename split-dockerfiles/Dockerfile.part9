@@ -5,9 +5,19 @@ RUN pip install --no-cache-dir huggingface_hub
 RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
 WORKDIR /root/.cache/huggingface
 
-RUN mkdir -p /root/.cache/huggingface/chunks && curl --fail --location --retry 5 --retry-all-errors -H "Authorization: Bearer $HF_TOKEN" -H "Range: bytes=0-9663676415" "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/model-fp8-mtp-ple.safetensors" -o /root/.cache/huggingface/chunks/model-fp8-mtp-ple.safetensors.part000
-RUN mkdir -p /root/.cache/huggingface/chunks && curl --fail --location --retry 5 --retry-all-errors -H "Authorization: Bearer $HF_TOKEN" -H "Range: bytes=9663676416-19327352831" "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/model-fp8-mtp-ple.safetensors" -o /root/.cache/huggingface/chunks/model-fp8-mtp-ple.safetensors.part001
-RUN mkdir -p /root/.cache/huggingface/chunks && curl --fail --location --retry 5 --retry-all-errors -H "Authorization: Bearer $HF_TOKEN" -H "Range: bytes=19327352832-28991029247" "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/model-fp8-mtp-ple.safetensors" -o /root/.cache/huggingface/chunks/model-fp8-mtp-ple.safetensors.part002
-RUN mkdir -p /root/.cache/huggingface/chunks && curl --fail --location --retry 5 --retry-all-errors -H "Authorization: Bearer $HF_TOKEN" -H "Range: bytes=28991029248-38654705663" "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/model-fp8-mtp-ple.safetensors" -o /root/.cache/huggingface/chunks/model-fp8-mtp-ple.safetensors.part003
-RUN mkdir -p /root/.cache/huggingface/chunks && curl --fail --location --retry 5 --retry-all-errors -H "Authorization: Bearer $HF_TOKEN" -H "Range: bytes=38654705664-48318382079" "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/model-fp8-mtp-ple.safetensors" -o /root/.cache/huggingface/chunks/model-fp8-mtp-ple.safetensors.part004
-RUN mkdir -p /root/.cache/huggingface/chunks && curl --fail --location --retry 5 --retry-all-errors -H "Authorization: Bearer $HF_TOKEN" -H "Range: bytes=48318382080-53717551729" "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/model-fp8-mtp-ple.safetensors" -o /root/.cache/huggingface/chunks/model-fp8-mtp-ple.safetensors.part005
+RUN hf download \
+    unsloth/Qwen3.8-Flash-Next \
+    "model-00099-of-00131.safetensors" \
+    "model-00100-of-00131.safetensors" \
+    "model-00101-of-00131.safetensors" \
+    "model-00102-of-00131.safetensors" \
+    "model-00103-of-00131.safetensors" \
+    "model-00104-of-00131.safetensors" \
+    "model-00105-of-00131.safetensors" \
+    "model-00106-of-00131.safetensors" \
+    "model-00107-of-00131.safetensors" \
+    "model-00108-of-00131.safetensors" \
+    "model-00109-of-00131.safetensors" \
+    "model-00110-of-00131.safetensors" \
+    "model-00111-of-00131.safetensors"
+

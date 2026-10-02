@@ -8,7 +8,8 @@ import urllib.request
 import sys
 import os
 
-MODEL_ID = "Qwen/Qwen3.8-Flash-Next"
+MODEL_ID = "unsloth/Qwen3.8-Flash-Next"
+HF_CACHE_REPO = "models--" + MODEL_ID.replace("/", "--")
 MAX_IMAGE_SIZE_GB = 55
 MAX_LAYER_SIZE_GB = 8
 GHCR_OWNER = "c0d1ac"  # Change this!
@@ -114,6 +115,7 @@ for i, part in enumerate(parts):
         for inc in includes:
             df.write(f'    "{inc}" \\\n')
         df.write("\n")
+        df.write(f"RUN mkdir -p /model && find /root/.cache/huggingface/hub/{HF_CACHE_REPO}/snapshots -type f -exec cp {{}} /model/ \\;\n\n")
         
         df.write("FROM alpine:latest\n")
         df.write("WORKDIR /model\n\n")

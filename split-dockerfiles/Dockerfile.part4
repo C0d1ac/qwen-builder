@@ -5,5 +5,19 @@ RUN pip install --no-cache-dir huggingface_hub
 RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
 WORKDIR /root/.cache/huggingface
 
-RUN mkdir -p /root/.cache/huggingface/chunks && curl --fail --location --retry 5 --retry-all-errors -H "Authorization: Bearer $HF_TOKEN" -H "Range: bytes=0-9663676415" "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/model-00005-of-00010.safetensors" -o /root/.cache/huggingface/chunks/model-00005-of-00010.safetensors.part000
-RUN mkdir -p /root/.cache/huggingface/chunks && curl --fail --location --retry 5 --retry-all-errors -H "Authorization: Bearer $HF_TOKEN" -H "Range: bytes=9663676416-10005362391" "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/model-00005-of-00010.safetensors" -o /root/.cache/huggingface/chunks/model-00005-of-00010.safetensors.part001
+RUN hf download \
+    unsloth/Qwen3.8-Flash-Next \
+    "model-00035-of-00131.safetensors" \
+    "model-00036-of-00131.safetensors" \
+    "model-00037-of-00131.safetensors" \
+    "model-00038-of-00131.safetensors" \
+    "model-00039-of-00131.safetensors" \
+    "model-00040-of-00131.safetensors" \
+    "model-00041-of-00131.safetensors" \
+    "model-00042-of-00131.safetensors" \
+    "model-00043-of-00131.safetensors" \
+    "model-00044-of-00131.safetensors" \
+    "model-00045-of-00131.safetensors" \
+    "model-00046-of-00131.safetensors" \
+    "model-00047-of-00131.safetensors"
+

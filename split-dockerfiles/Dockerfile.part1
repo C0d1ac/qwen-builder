@@ -7,21 +7,29 @@ WORKDIR /root/.cache/huggingface
 
 # Config & tokenizer
 RUN hf download \
-    nvidia/Qwen3.8-Flash-Next-NVFP4 \
+    unsloth/Qwen3.8-Flash-Next \
+    "LICENSE" \
     "README.md" \
     "chat_template.jinja" \
     "config.json" \
     "generation_config.json" \
-    "hf_quant_config.json" \
     "merges.txt" \
     "model.safetensors.index.json" \
     "preprocessor_config.json" \
-    "processor_config.json" \
     "tokenizer.json" \
     "tokenizer_config.json" \
     "video_preprocessor_config.json" \
     "vocab.json" \
-    "model-00001-of-00010.safetensors"
+    "model-00001-of-00131.safetensors" \
+    "model-00002-of-00131.safetensors" \
+    "model-00003-of-00131.safetensors" \
+    "model-00004-of-00131.safetensors" \
+    "model-00005-of-00131.safetensors" \
+    "model-00006-of-00131.safetensors" \
+    "model-00007-of-00131.safetensors" \
+    "model-00008-of-00131.safetensors" \
+    "model-00009-of-00131.safetensors" \
+    "model-00010-of-00131.safetensors" \
+    "model-00011-of-00131.safetensors" \
+    "model-00012-of-00131.safetensors"
 
-RUN mkdir -p /root/.cache/huggingface/chunks && curl --fail --location --retry 5 --retry-all-errors -H "Authorization: Bearer $HF_TOKEN" -H "Range: bytes=0-9663676415" "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/model-00002-of-00010.safetensors" -o /root/.cache/huggingface/chunks/model-00002-of-00010.safetensors.part000
-RUN mkdir -p /root/.cache/huggingface/chunks && curl --fail --location --retry 5 --retry-all-errors -H "Authorization: Bearer $HF_TOKEN" -H "Range: bytes=9663676416-10005510303" "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/model-00002-of-00010.safetensors" -o /root/.cache/huggingface/chunks/model-00002-of-00010.safetensors.part001

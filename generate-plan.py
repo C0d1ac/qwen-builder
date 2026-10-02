@@ -12,7 +12,7 @@ WHAT'S DIFFERENT FROM THE OLD SCRIPT:
     runtime reassembler both consume this manifest.
 
 ENV:
-  HF_REPO          — repo id, e.g. nvidia/Qwen3.8-Flash-Next-NVFP4
+    HF_REPO          — repo id, e.g. unsloth/Qwen3.8-Flash-Next
   HF_TOKEN         — optional, for gated/private repos
   CHUNK_BYTES      — chunk size in bytes (default 9 * 1024**3 = 9663676416)
   HF_ENDPOINT      — mirror/proxy base, default https://huggingface.co
@@ -25,7 +25,7 @@ import math
 import requests
 from pathlib import Path
 
-REPO_ID      = os.environ.get("HF_REPO", "nvidia/Qwen3.8-Flash-Next-NVFP4")
+REPO_ID      = os.environ.get("HF_REPO", "unsloth/Qwen3.8-Flash-Next")
 HF_TOKEN     = os.environ.get("HF_TOKEN", "")
 HF_ENDPOINT  = os.environ.get("HF_ENDPOINT", "https://huggingface.co")
 CHUNK_BYTES  = int(os.environ.get("CHUNK_BYTES", 9 * 1024 * 1024 * 1024))  # 9 GiB

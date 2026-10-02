@@ -5,7 +5,7 @@ import json
 import urllib.request
 import os
 
-MODEL_ID = "nvidia/Qwen3.8-Flash-Next-NVFP4"
+MODEL_ID = "unsloth/Qwen3.8-Flash-Next"
 NUM_PARTS = 10
 MAX_LAYER_BYTES = 9 * 1024**3
 
@@ -28,7 +28,7 @@ total = sum(f['size'] for f in safetensors)
 per_part = total // NUM_PARTS + (1 if total % NUM_PARTS else 0)
 print(f"Total: {total/1024**3:.1f}GB, Target per part: {per_part/1024**3:.1f}GB")
 
-# Split into 7 parts
+# Split into ten target parts, omitting empty parts if the repository has fewer files.
 parts = [[] for _ in range(NUM_PARTS)]
 part_idx = 0
 part_size = 0

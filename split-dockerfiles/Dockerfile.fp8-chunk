@@ -9,7 +9,7 @@ RUN apk add --no-cache ca-certificates curl && \
     mkdir -p /model/chunks && \
     curl --fail --location --retry 5 --retry-all-errors \
       -H "Range: bytes=${RANGE_START}-${RANGE_END}" \
-      "https://huggingface.co/nvidia/Qwen3.8-Flash-Next-NVFP4/resolve/main/model-fp8-mtp-ple.safetensors" \
+      "https://huggingface.co/unsloth/Qwen3.8-Flash-Next/resolve/main/model-fp8-mtp-ple.safetensors" \
       -o "/model/chunks/model-fp8-mtp-ple.safetensors.part${CHUNK_INDEX}" && \
     test "$(stat -c %s "/model/chunks/model-fp8-mtp-ple.safetensors.part${CHUNK_INDEX}")" = "$CHUNK_SIZE"
 

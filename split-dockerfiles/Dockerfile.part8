@@ -6,7 +6,18 @@ RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf 
 WORKDIR /root/.cache/huggingface
 
 RUN hf download \
-    nvidia/Qwen3.8-Flash-Next-NVFP4 \
-    "model-00009-of-00010.safetensors" \
-    "model-00010-of-00010.safetensors"
+    unsloth/Qwen3.8-Flash-Next \
+    "model-00086-of-00131.safetensors" \
+    "model-00087-of-00131.safetensors" \
+    "model-00088-of-00131.safetensors" \
+    "model-00089-of-00131.safetensors" \
+    "model-00090-of-00131.safetensors" \
+    "model-00091-of-00131.safetensors" \
+    "model-00092-of-00131.safetensors" \
+    "model-00093-of-00131.safetensors" \
+    "model-00094-of-00131.safetensors" \
+    "model-00095-of-00131.safetensors" \
+    "model-00096-of-00131.safetensors" \
+    "model-00097-of-00131.safetensors" \
+    "model-00098-of-00131.safetensors"
 

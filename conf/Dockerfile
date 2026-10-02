@@ -3,7 +3,7 @@ RUN pip install --no-cache-dir huggingface_hub
 WORKDIR /conf
 
 RUN hf download \
-	Qwen/Qwen3.8-Flash-Next \
+	unsloth/Qwen3.8-Flash-Next \
 	config.json \
 	tokenizer.json \
 	tokenizer_config.json \

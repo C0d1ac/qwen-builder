@@ -3,7 +3,8 @@ set -e
 
 OWNER="c0d1ac"
 MODEL_DIR="/data/qwen-model"
-NUM_PARTS=7
+NUM_PARTS=10
+HF_CACHE_REPO="models--unsloth--Qwen3.8-Flash-Next"
 
 mkdir -p "$MODEL_DIR"
 
@@ -24,9 +25,14 @@ for i in $(seq 1 $NUM_PARTS); do
     echo "Pulling..."
     docker pull "$IMAGE"
 
-    echo "Extracting files..."
+    echo "Extracting cached files..."
     docker create --name "$CONTAINER" "$IMAGE"
-    docker cp "$CONTAINER:/model/." "$MODEL_DIR/"
+    CACHE_DIR="$(mktemp -d)"
+    docker cp "$CONTAINER:/root/.cache/huggingface/hub/$HF_CACHE_REPO/snapshots/." "$CACHE_DIR/"
+    find "$CACHE_DIR" -type f -o -type l | while read -r file; do
+        cp -L "$file" "$MODEL_DIR/$(basename "$file")"
+    done
+    rm -rf "$CACHE_DIR"
     docker rm "$CONTAINER"
 
     echo "Removing image to free disk..."

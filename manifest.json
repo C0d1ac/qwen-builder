@@ -1,11 +1,15 @@
 {
-  "repo_id": "nvidia/Qwen3.8-Flash-Next-NVFP4",
+  "repo_id": "unsloth/Qwen3.8-Flash-Next",
   "endpoint": "https://huggingface.co",
   "chunk_bytes": 9663676416,
   "files": [
     {
       "path": ".gitattributes",
-      "size": 0
+      "size": 1570
+    },
+    {
+      "path": "LICENSE",
+      "size": 3235
     },
     {
       "path": "README.md",
@@ -13,7 +17,7 @@
     },
     {
       "path": "chat_template.jinja",
-      "size": 0
+      "size": 9993
     },
     {
       "path": "config.json",
@@ -24,68 +28,540 @@
       "size": 202
     },
     {
-      "path": "hf_quant_config.json",
-      "size": 0
-    },
-    {
       "path": "merges.txt",
-      "size": 0
+      "size": 3353259
     },
     {
-      "path": "model-00001-of-00010.safetensors",
-      "size": 3115991696
+      "path": "model-00001-of-00131.safetensors",
+      "size": 1040155944
     },
     {
-      "path": "model-00002-of-00010.safetensors",
-      "size": 10005510304
+      "path": "model-00002-of-00131.safetensors",
+      "size": 3355443368
     },
     {
-      "path": "model-00003-of-00010.safetensors",
-      "size": 10005364728
+      "path": "model-00003-of-00131.safetensors",
+      "size": 1832518264
     },
     {
-      "path": "model-00004-of-00010.safetensors",
-      "size": 10006060112
+      "path": "model-00004-of-00131.safetensors",
+      "size": 3355443368
     },
     {
-      "path": "model-00005-of-00010.safetensors",
-      "size": 10005362392
+      "path": "model-00005-of-00131.safetensors",
+      "size": 3355888504
     },
     {
-      "path": "model-00006-of-00010.safetensors",
-      "size": 10005375328
+      "path": "model-00006-of-00131.safetensors",
+      "size": 3200016032
     },
     {
-      "path": "model-00007-of-00010.safetensors",
-      "size": 10005956544
+      "path": "model-00007-of-00131.safetensors",
+      "size": 3200016032
     },
     {
-      "path": "model-00008-of-00010.safetensors",
-      "size": 10005375200
+      "path": "model-00008-of-00131.safetensors",
+      "size": 3200016032
     },
     {
-      "path": "model-00009-of-00010.safetensors",
-      "size": 5679113808
+      "path": "model-00009-of-00131.safetensors",
+      "size": 3200016032
     },
     {
-      "path": "model-00010-of-00010.safetensors",
-      "size": 128587536
+      "path": "model-00010-of-00131.safetensors",
+      "size": 3200016032
     },
     {
-      "path": "model-fp8-mtp-ple.safetensors",
-      "size": 53717551730
+      "path": "model-00011-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00012-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00013-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00014-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00015-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00016-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00017-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00018-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00019-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00020-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00021-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00022-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00023-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00024-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00025-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00026-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00027-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00028-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00029-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00030-of-00131.safetensors",
+      "size": 3200016032
+    },
+    {
+      "path": "model-00031-of-00131.safetensors",
+      "size": 3200016040
+    },
+    {
+      "path": "model-00032-of-00131.safetensors",
+      "size": 3200016040
+    },
+    {
+      "path": "model-00033-of-00131.safetensors",
+      "size": 3200016040
+    },
+    {
+      "path": "model-00034-of-00131.safetensors",
+      "size": 3200016040
+    },
+    {
+      "path": "model-00035-of-00131.safetensors",
+      "size": 3200016040
+    },
+    {
+      "path": "model-00036-of-00131.safetensors",
+      "size": 3200016040
+    },
+    {
+      "path": "model-00037-of-00131.safetensors",
+      "size": 1742347160
+    },
+    {
+      "path": "model-00038-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00039-of-00131.safetensors",
+      "size": 1716599840
+    },
+    {
+      "path": "model-00040-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00041-of-00131.safetensors",
+      "size": 1941966288
+    },
+    {
+      "path": "model-00042-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00043-of-00131.safetensors",
+      "size": 1839072016
+    },
+    {
+      "path": "model-00044-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00045-of-00131.safetensors",
+      "size": 1832518280
+    },
+    {
+      "path": "model-00046-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00047-of-00131.safetensors",
+      "size": 1716681904
+    },
+    {
+      "path": "model-00048-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00049-of-00131.safetensors",
+      "size": 1935433152
+    },
+    {
+      "path": "model-00050-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00051-of-00131.safetensors",
+      "size": 1832518280
+    },
+    {
+      "path": "model-00052-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00053-of-00131.safetensors",
+      "size": 1839072024
+    },
+    {
+      "path": "model-00054-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00055-of-00131.safetensors",
+      "size": 1716599840
+    },
+    {
+      "path": "model-00056-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00057-of-00131.safetensors",
+      "size": 1941966280
+    },
+    {
+      "path": "model-00058-of-00131.safetensors",
+      "size": 3355443368
+    },
+    {
+      "path": "model-00059-of-00131.safetensors",
+      "size": 1716600048
+    },
+    {
+      "path": "model-00060-of-00131.safetensors",
+      "size": 3471361528
+    },
+    {
+      "path": "model-00061-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00062-of-00131.safetensors",
+      "size": 3510240000
+    },
+    {
+      "path": "model-00063-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00064-of-00131.safetensors",
+      "size": 1832518280
+    },
+    {
+      "path": "model-00065-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00066-of-00131.safetensors",
+      "size": 1719221392
+    },
+    {
+      "path": "model-00067-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00068-of-00131.safetensors",
+      "size": 1935412552
+    },
+    {
+      "path": "model-00069-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00070-of-00131.safetensors",
+      "size": 1832523520
+    },
+    {
+      "path": "model-00071-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00072-of-00131.safetensors",
+      "size": 1839072128
+    },
+    {
+      "path": "model-00073-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00074-of-00131.safetensors",
+      "size": 1716599840
+    },
+    {
+      "path": "model-00075-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00076-of-00131.safetensors",
+      "size": 1938689480
+    },
+    {
+      "path": "model-00077-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00078-of-00131.safetensors",
+      "size": 1832600344
+    },
+    {
+      "path": "model-00079-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00080-of-00131.safetensors",
+      "size": 1716599840
+    },
+    {
+      "path": "model-00081-of-00131.safetensors",
+      "size": 3355443368
+    },
+    {
+      "path": "model-00082-of-00131.safetensors",
+      "size": 1935433136
+    },
+    {
+      "path": "model-00083-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00084-of-00131.safetensors",
+      "size": 1716599840
+    },
+    {
+      "path": "model-00085-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00086-of-00131.safetensors",
+      "size": 1941966296
+    },
+    {
+      "path": "model-00087-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00088-of-00131.safetensors",
+      "size": 1839072024
+    },
+    {
+      "path": "model-00089-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00090-of-00131.safetensors",
+      "size": 1835795216
+    },
+    {
+      "path": "model-00091-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00092-of-00131.safetensors",
+      "size": 1716599840
+    },
+    {
+      "path": "model-00093-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00094-of-00131.safetensors",
+      "size": 1935412928
+    },
+    {
+      "path": "model-00095-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00096-of-00131.safetensors",
+      "size": 1832518280
+    },
+    {
+      "path": "model-00097-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00098-of-00131.safetensors",
+      "size": 1832518280
+    },
+    {
+      "path": "model-00099-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00100-of-00131.safetensors",
+      "size": 1716600224
+    },
+    {
+      "path": "model-00101-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00102-of-00131.safetensors",
+      "size": 1935413160
+    },
+    {
+      "path": "model-00103-of-00131.safetensors",
+      "size": 3355443368
+    },
+    {
+      "path": "model-00104-of-00131.safetensors",
+      "size": 1832518272
+    },
+    {
+      "path": "model-00105-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00106-of-00131.safetensors",
+      "size": 1863975680
+    },
+    {
+      "path": "model-00107-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00108-of-00131.safetensors",
+      "size": 1900676064
+    },
+    {
+      "path": "model-00109-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00110-of-00131.safetensors",
+      "size": 1716599840
+    },
+    {
+      "path": "model-00111-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00112-of-00131.safetensors",
+      "size": 1935413176
+    },
+    {
+      "path": "model-00113-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00114-of-00131.safetensors",
+      "size": 1832523512
+    },
+    {
+      "path": "model-00115-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00116-of-00131.safetensors",
+      "size": 1832518280
+    },
+    {
+      "path": "model-00117-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00118-of-00131.safetensors",
+      "size": 1716620424
+    },
+    {
+      "path": "model-00119-of-00131.safetensors",
+      "size": 3355443376
+    },
+    {
+      "path": "model-00120-of-00131.safetensors",
+      "size": 1948519840
+    },
+    {
+      "path": "model-00121-of-00131.safetensors",
+      "size": 3355443368
+    },
+    {
+      "path": "model-00122-of-00131.safetensors",
+      "size": 1832518264
+    },
+    {
+      "path": "model-00123-of-00131.safetensors",
+      "size": 3355443368
+    },
+    {
+      "path": "model-00124-of-00131.safetensors",
+      "size": 1729707128
+    },
+    {
+      "path": "model-00125-of-00131.safetensors",
+      "size": 3355443368
+    },
+    {
+      "path": "model-00126-of-00131.safetensors",
+      "size": 1935412520
+    },
+    {
+      "path": "model-00127-of-00131.safetensors",
+      "size": 3355443368
+    },
+    {
+      "path": "model-00128-of-00131.safetensors",
+      "size": 1832518264
+    },
+    {
+      "path": "model-00129-of-00131.safetensors",
+      "size": 3355443368
+    },
+    {
+      "path": "model-00130-of-00131.safetensors",
+      "size": 2974788136
+    },
+    {
+      "path": "model-00131-of-00131.safetensors",
+      "size": 1271398528
     },
     {
       "path": "model.safetensors.index.json",
-      "size": 31275518
+      "size": 170726
     },
     {
       "path": "preprocessor_config.json",
       "size": 390
-    },
-    {
-      "path": "processor_config.json",
-      "size": 0
     },
     {
       "path": "tokenizer.json",
@@ -93,7 +569,7 @@
     },
     {
       "path": "tokenizer_config.json",
-      "size": 0
+      "size": 17928
     },
     {
       "path": "video_preprocessor_config.json",
@@ -101,7 +577,7 @@
     },
     {
       "path": "vocab.json",
-      "size": 0
+      "size": 6722759
     }
   ],
   "chunks": [
@@ -110,8 +586,16 @@
       "chunk_index": 0,
       "total_chunks": 1,
       "offset": 0,
-      "size": 0,
+      "size": 1570,
       "chunk_name": ".gitattributes.part000"
+    },
+    {
+      "source_file": "LICENSE",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3235,
+      "chunk_name": "LICENSE.part000"
     },
     {
       "source_file": "README.md",
@@ -126,7 +610,7 @@
       "chunk_index": 0,
       "total_chunks": 1,
       "offset": 0,
-      "size": 0,
+      "size": 9993,
       "chunk_name": "chat_template.jinja.part000"
     },
     {
@@ -146,211 +630,1067 @@
       "chunk_name": "generation_config.json.part000"
     },
     {
-      "source_file": "hf_quant_config.json",
-      "chunk_index": 0,
-      "total_chunks": 1,
-      "offset": 0,
-      "size": 0,
-      "chunk_name": "hf_quant_config.json.part000"
-    },
-    {
       "source_file": "merges.txt",
       "chunk_index": 0,
       "total_chunks": 1,
       "offset": 0,
-      "size": 0,
+      "size": 3353259,
       "chunk_name": "merges.txt.part000"
     },
     {
-      "source_file": "model-00001-of-00010.safetensors",
+      "source_file": "model-00001-of-00131.safetensors",
       "chunk_index": 0,
       "total_chunks": 1,
       "offset": 0,
-      "size": 3115991696,
-      "chunk_name": "model-00001-of-00010.safetensors.part000"
+      "size": 1040155944,
+      "chunk_name": "model-00001-of-00131.safetensors.part000"
     },
     {
-      "source_file": "model-00002-of-00010.safetensors",
-      "chunk_index": 0,
-      "total_chunks": 2,
-      "offset": 0,
-      "size": 5002755152,
-      "chunk_name": "model-00002-of-00010.safetensors.part000"
-    },
-    {
-      "source_file": "model-00002-of-00010.safetensors",
-      "chunk_index": 1,
-      "total_chunks": 2,
-      "offset": 5002755152,
-      "size": 5002755152,
-      "chunk_name": "model-00002-of-00010.safetensors.part001"
-    },
-    {
-      "source_file": "model-00003-of-00010.safetensors",
-      "chunk_index": 0,
-      "total_chunks": 2,
-      "offset": 0,
-      "size": 5002682364,
-      "chunk_name": "model-00003-of-00010.safetensors.part000"
-    },
-    {
-      "source_file": "model-00003-of-00010.safetensors",
-      "chunk_index": 1,
-      "total_chunks": 2,
-      "offset": 5002682364,
-      "size": 5002682364,
-      "chunk_name": "model-00003-of-00010.safetensors.part001"
-    },
-    {
-      "source_file": "model-00004-of-00010.safetensors",
-      "chunk_index": 0,
-      "total_chunks": 2,
-      "offset": 0,
-      "size": 5003030056,
-      "chunk_name": "model-00004-of-00010.safetensors.part000"
-    },
-    {
-      "source_file": "model-00004-of-00010.safetensors",
-      "chunk_index": 1,
-      "total_chunks": 2,
-      "offset": 5003030056,
-      "size": 5003030056,
-      "chunk_name": "model-00004-of-00010.safetensors.part001"
-    },
-    {
-      "source_file": "model-00005-of-00010.safetensors",
-      "chunk_index": 0,
-      "total_chunks": 2,
-      "offset": 0,
-      "size": 5002681196,
-      "chunk_name": "model-00005-of-00010.safetensors.part000"
-    },
-    {
-      "source_file": "model-00005-of-00010.safetensors",
-      "chunk_index": 1,
-      "total_chunks": 2,
-      "offset": 5002681196,
-      "size": 5002681196,
-      "chunk_name": "model-00005-of-00010.safetensors.part001"
-    },
-    {
-      "source_file": "model-00006-of-00010.safetensors",
-      "chunk_index": 0,
-      "total_chunks": 2,
-      "offset": 0,
-      "size": 5002687664,
-      "chunk_name": "model-00006-of-00010.safetensors.part000"
-    },
-    {
-      "source_file": "model-00006-of-00010.safetensors",
-      "chunk_index": 1,
-      "total_chunks": 2,
-      "offset": 5002687664,
-      "size": 5002687664,
-      "chunk_name": "model-00006-of-00010.safetensors.part001"
-    },
-    {
-      "source_file": "model-00007-of-00010.safetensors",
-      "chunk_index": 0,
-      "total_chunks": 2,
-      "offset": 0,
-      "size": 5002978272,
-      "chunk_name": "model-00007-of-00010.safetensors.part000"
-    },
-    {
-      "source_file": "model-00007-of-00010.safetensors",
-      "chunk_index": 1,
-      "total_chunks": 2,
-      "offset": 5002978272,
-      "size": 5002978272,
-      "chunk_name": "model-00007-of-00010.safetensors.part001"
-    },
-    {
-      "source_file": "model-00008-of-00010.safetensors",
-      "chunk_index": 0,
-      "total_chunks": 2,
-      "offset": 0,
-      "size": 5002687600,
-      "chunk_name": "model-00008-of-00010.safetensors.part000"
-    },
-    {
-      "source_file": "model-00008-of-00010.safetensors",
-      "chunk_index": 1,
-      "total_chunks": 2,
-      "offset": 5002687600,
-      "size": 5002687600,
-      "chunk_name": "model-00008-of-00010.safetensors.part001"
-    },
-    {
-      "source_file": "model-00009-of-00010.safetensors",
+      "source_file": "model-00002-of-00131.safetensors",
       "chunk_index": 0,
       "total_chunks": 1,
       "offset": 0,
-      "size": 5679113808,
-      "chunk_name": "model-00009-of-00010.safetensors.part000"
+      "size": 3355443368,
+      "chunk_name": "model-00002-of-00131.safetensors.part000"
     },
     {
-      "source_file": "model-00010-of-00010.safetensors",
+      "source_file": "model-00003-of-00131.safetensors",
       "chunk_index": 0,
       "total_chunks": 1,
       "offset": 0,
-      "size": 128587536,
-      "chunk_name": "model-00010-of-00010.safetensors.part000"
+      "size": 1832518264,
+      "chunk_name": "model-00003-of-00131.safetensors.part000"
     },
     {
-      "source_file": "model-fp8-mtp-ple.safetensors",
+      "source_file": "model-00004-of-00131.safetensors",
       "chunk_index": 0,
-      "total_chunks": 6,
+      "total_chunks": 1,
       "offset": 0,
-      "size": 8952925289,
-      "chunk_name": "model-fp8-mtp-ple.safetensors.part000"
+      "size": 3355443368,
+      "chunk_name": "model-00004-of-00131.safetensors.part000"
     },
     {
-      "source_file": "model-fp8-mtp-ple.safetensors",
-      "chunk_index": 1,
-      "total_chunks": 6,
-      "offset": 8952925289,
-      "size": 8952925289,
-      "chunk_name": "model-fp8-mtp-ple.safetensors.part001"
+      "source_file": "model-00005-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355888504,
+      "chunk_name": "model-00005-of-00131.safetensors.part000"
     },
     {
-      "source_file": "model-fp8-mtp-ple.safetensors",
-      "chunk_index": 2,
-      "total_chunks": 6,
-      "offset": 17905850578,
-      "size": 8952925289,
-      "chunk_name": "model-fp8-mtp-ple.safetensors.part002"
+      "source_file": "model-00006-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00006-of-00131.safetensors.part000"
     },
     {
-      "source_file": "model-fp8-mtp-ple.safetensors",
-      "chunk_index": 3,
-      "total_chunks": 6,
-      "offset": 26858775867,
-      "size": 8952925289,
-      "chunk_name": "model-fp8-mtp-ple.safetensors.part003"
+      "source_file": "model-00007-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00007-of-00131.safetensors.part000"
     },
     {
-      "source_file": "model-fp8-mtp-ple.safetensors",
-      "chunk_index": 4,
-      "total_chunks": 6,
-      "offset": 35811701156,
-      "size": 8952925289,
-      "chunk_name": "model-fp8-mtp-ple.safetensors.part004"
+      "source_file": "model-00008-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00008-of-00131.safetensors.part000"
     },
     {
-      "source_file": "model-fp8-mtp-ple.safetensors",
-      "chunk_index": 5,
-      "total_chunks": 6,
-      "offset": 44764626445,
-      "size": 8952925285,
-      "chunk_name": "model-fp8-mtp-ple.safetensors.part005"
+      "source_file": "model-00009-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00009-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00010-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00010-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00011-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00011-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00012-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00012-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00013-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00013-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00014-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00014-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00015-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00015-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00016-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00016-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00017-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00017-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00018-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00018-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00019-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00019-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00020-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00020-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00021-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00021-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00022-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00022-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00023-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00023-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00024-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00024-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00025-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00025-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00026-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00026-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00027-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00027-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00028-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00028-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00029-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00029-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00030-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016032,
+      "chunk_name": "model-00030-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00031-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016040,
+      "chunk_name": "model-00031-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00032-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016040,
+      "chunk_name": "model-00032-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00033-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016040,
+      "chunk_name": "model-00033-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00034-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016040,
+      "chunk_name": "model-00034-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00035-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016040,
+      "chunk_name": "model-00035-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00036-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3200016040,
+      "chunk_name": "model-00036-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00037-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1742347160,
+      "chunk_name": "model-00037-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00038-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00038-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00039-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1716599840,
+      "chunk_name": "model-00039-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00040-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00040-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00041-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1941966288,
+      "chunk_name": "model-00041-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00042-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00042-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00043-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1839072016,
+      "chunk_name": "model-00043-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00044-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00044-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00045-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1832518280,
+      "chunk_name": "model-00045-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00046-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00046-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00047-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1716681904,
+      "chunk_name": "model-00047-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00048-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00048-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00049-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1935433152,
+      "chunk_name": "model-00049-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00050-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00050-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00051-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1832518280,
+      "chunk_name": "model-00051-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00052-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00052-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00053-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1839072024,
+      "chunk_name": "model-00053-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00054-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00054-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00055-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1716599840,
+      "chunk_name": "model-00055-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00056-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00056-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00057-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1941966280,
+      "chunk_name": "model-00057-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00058-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443368,
+      "chunk_name": "model-00058-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00059-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1716600048,
+      "chunk_name": "model-00059-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00060-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3471361528,
+      "chunk_name": "model-00060-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00061-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00061-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00062-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3510240000,
+      "chunk_name": "model-00062-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00063-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00063-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00064-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1832518280,
+      "chunk_name": "model-00064-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00065-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00065-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00066-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1719221392,
+      "chunk_name": "model-00066-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00067-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00067-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00068-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1935412552,
+      "chunk_name": "model-00068-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00069-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00069-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00070-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1832523520,
+      "chunk_name": "model-00070-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00071-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00071-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00072-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1839072128,
+      "chunk_name": "model-00072-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00073-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00073-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00074-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1716599840,
+      "chunk_name": "model-00074-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00075-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00075-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00076-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1938689480,
+      "chunk_name": "model-00076-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00077-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00077-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00078-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1832600344,
+      "chunk_name": "model-00078-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00079-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00079-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00080-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1716599840,
+      "chunk_name": "model-00080-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00081-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443368,
+      "chunk_name": "model-00081-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00082-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1935433136,
+      "chunk_name": "model-00082-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00083-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00083-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00084-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1716599840,
+      "chunk_name": "model-00084-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00085-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00085-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00086-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1941966296,
+      "chunk_name": "model-00086-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00087-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00087-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00088-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1839072024,
+      "chunk_name": "model-00088-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00089-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00089-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00090-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1835795216,
+      "chunk_name": "model-00090-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00091-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00091-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00092-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1716599840,
+      "chunk_name": "model-00092-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00093-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00093-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00094-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1935412928,
+      "chunk_name": "model-00094-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00095-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00095-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00096-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1832518280,
+      "chunk_name": "model-00096-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00097-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00097-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00098-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1832518280,
+      "chunk_name": "model-00098-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00099-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00099-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00100-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1716600224,
+      "chunk_name": "model-00100-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00101-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00101-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00102-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1935413160,
+      "chunk_name": "model-00102-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00103-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443368,
+      "chunk_name": "model-00103-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00104-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1832518272,
+      "chunk_name": "model-00104-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00105-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00105-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00106-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1863975680,
+      "chunk_name": "model-00106-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00107-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00107-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00108-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1900676064,
+      "chunk_name": "model-00108-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00109-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00109-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00110-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1716599840,
+      "chunk_name": "model-00110-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00111-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00111-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00112-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1935413176,
+      "chunk_name": "model-00112-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00113-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00113-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00114-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1832523512,
+      "chunk_name": "model-00114-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00115-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00115-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00116-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1832518280,
+      "chunk_name": "model-00116-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00117-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00117-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00118-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1716620424,
+      "chunk_name": "model-00118-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00119-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443376,
+      "chunk_name": "model-00119-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00120-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1948519840,
+      "chunk_name": "model-00120-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00121-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443368,
+      "chunk_name": "model-00121-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00122-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1832518264,
+      "chunk_name": "model-00122-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00123-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443368,
+      "chunk_name": "model-00123-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00124-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1729707128,
+      "chunk_name": "model-00124-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00125-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443368,
+      "chunk_name": "model-00125-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00126-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1935412520,
+      "chunk_name": "model-00126-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00127-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443368,
+      "chunk_name": "model-00127-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00128-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1832518264,
+      "chunk_name": "model-00128-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00129-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 3355443368,
+      "chunk_name": "model-00129-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00130-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 2974788136,
+      "chunk_name": "model-00130-of-00131.safetensors.part000"
+    },
+    {
+      "source_file": "model-00131-of-00131.safetensors",
+      "chunk_index": 0,
+      "total_chunks": 1,
+      "offset": 0,
+      "size": 1271398528,
+      "chunk_name": "model-00131-of-00131.safetensors.part000"
     },
     {
       "source_file": "model.safetensors.index.json",
       "chunk_index": 0,
       "total_chunks": 1,
       "offset": 0,
-      "size": 31275518,
+      "size": 170726,
       "chunk_name": "model.safetensors.index.json.part000"
     },
     {
@@ -360,14 +1700,6 @@
       "offset": 0,
       "size": 390,
       "chunk_name": "preprocessor_config.json.part000"
-    },
-    {
-      "source_file": "processor_config.json",
-      "chunk_index": 0,
-      "total_chunks": 1,
-      "offset": 0,
-      "size": 0,
-      "chunk_name": "processor_config.json.part000"
     },
     {
       "source_file": "tokenizer.json",
@@ -382,7 +1714,7 @@
       "chunk_index": 0,
       "total_chunks": 1,
       "offset": 0,
-      "size": 0,
+      "size": 17928,
       "chunk_name": "tokenizer_config.json.part000"
     },
     {
@@ -398,7 +1730,7 @@
       "chunk_index": 0,
       "total_chunks": 1,
       "offset": 0,
-      "size": 0,
+      "size": 6722759,
       "chunk_name": "vocab.json.part000"
     }
   ]
